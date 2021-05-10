@@ -20,14 +20,6 @@
                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="07E-Gy-lot">
                         <rect key="frame" x="0.0" y="0.0" width="200" height="230"/>
                     </imageView>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Cuy-Lj-V6m">
-                        <rect key="frame" x="5" y="202.5" width="190" height="22.5"/>
-                        <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
-                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <nil key="highlightedColor"/>
-                        <color key="shadowColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <size key="shadowOffset" width="-1" height="-1"/>
-                    </label>
                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Enw-l5-P0i">
                         <rect key="frame" x="160" y="10" width="30" height="30"/>
                         <constraints>
@@ -39,17 +31,39 @@
                             <action selector="addTofavourites:" destination="gTV-IL-0wX" eventType="touchUpInside" id="TYb-H4-kr0"/>
                         </connections>
                     </button>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9TO-6H-HBW">
+                        <rect key="frame" x="5" y="185" width="40" height="40"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="8.7" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0Ty-wz-IJb">
+                                <rect key="frame" x="9.5" y="11" width="21" height="18"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="0.039215687659999998" green="0.082352943720000002" blue="0.098039209840000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <constraints>
+                            <constraint firstItem="0Ty-wz-IJb" firstAttribute="centerY" secondItem="9TO-6H-HBW" secondAttribute="centerY" id="Deg-f6-k4d"/>
+                            <constraint firstAttribute="width" constant="40" id="HK8-eU-4oG"/>
+                            <constraint firstAttribute="height" constant="40" id="qcv-wW-pT8"/>
+                            <constraint firstItem="0Ty-wz-IJb" firstAttribute="centerX" secondItem="9TO-6H-HBW" secondAttribute="centerX" id="tFa-mB-zZW"/>
+                        </constraints>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                <integer key="value" value="20"/>
+                            </userDefinedRuntimeAttribute>
+                        </userDefinedRuntimeAttributes>
+                    </view>
                 </subviews>
             </view>
             <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
             <constraints>
+                <constraint firstAttribute="bottom" secondItem="9TO-6H-HBW" secondAttribute="bottom" constant="5" id="1dA-yD-9YE"/>
                 <constraint firstAttribute="trailing" secondItem="07E-Gy-lot" secondAttribute="trailing" id="1iI-Ni-iL8"/>
                 <constraint firstAttribute="bottom" secondItem="07E-Gy-lot" secondAttribute="bottom" id="48b-Nv-u8u"/>
-                <constraint firstItem="Cuy-Lj-V6m" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="5" id="8Xe-Fc-3ds"/>
                 <constraint firstItem="07E-Gy-lot" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="ASD-di-Cdp"/>
-                <constraint firstAttribute="bottom" secondItem="Cuy-Lj-V6m" secondAttribute="bottom" constant="5" id="BJ2-5X-1xo"/>
-                <constraint firstAttribute="trailing" secondItem="Cuy-Lj-V6m" secondAttribute="trailing" constant="5" id="Mff-qy-W8c"/>
                 <constraint firstAttribute="trailing" secondItem="Enw-l5-P0i" secondAttribute="trailing" constant="10" id="VpP-Cq-CW6"/>
+                <constraint firstItem="9TO-6H-HBW" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="5" id="clG-F9-GIy"/>
                 <constraint firstItem="07E-Gy-lot" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="kQa-Hz-xej"/>
                 <constraint firstItem="Enw-l5-P0i" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" constant="10" id="rVe-ge-Nyp"/>
             </constraints>
@@ -57,7 +71,8 @@
             <connections>
                 <outlet property="favouriteButton" destination="Enw-l5-P0i" id="E4X-Rx-QBn"/>
                 <outlet property="imgView" destination="07E-Gy-lot" id="f8A-Ii-iby"/>
-                <outlet property="titleLabel" destination="Cuy-Lj-V6m" id="SEv-Vr-CE0"/>
+                <outlet property="ratingLabel" destination="0Ty-wz-IJb" id="qM9-ta-4fZ"/>
+                <outlet property="ratingView" destination="9TO-6H-HBW" id="H9J-2d-ZJx"/>
             </connections>
             <point key="canvasLocation" x="30.434782608695656" y="115.17857142857142"/>
         </collectionViewCell>

@@ -34,7 +34,7 @@
                             </segmentedControl>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="qQN-PK-eaE">
                                 <rect key="frame" x="0.0" y="178" width="390" height="666"/>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="tSD-OE-NkT">
                                     <size key="itemSize" width="128" height="128"/>
                                     <size key="headerReferenceSize" width="0.0" height="0.0"/>
@@ -45,7 +45,7 @@
                             </collectionView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <constraints>
                             <constraint firstItem="qQN-PK-eaE" firstAttribute="top" secondItem="mWf-Mz-OR9" secondAttribute="bottom" constant="8" symbolic="YES" id="1cJ-AT-95k"/>
                             <constraint firstItem="1Xo-4v-dc1" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="Ekp-HA-R8e"/>
@@ -81,7 +81,7 @@
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QQm-4L-hk8">
                                 <rect key="frame" x="0.0" y="88" width="390" height="756"/>
                                 <subviews>
-                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="iconFill" translatesAutoresizingMaskIntoConstraints="NO" id="aHd-M4-VJy">
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="aHd-M4-VJy">
                                         <rect key="frame" x="0.0" y="0.0" width="390" height="507"/>
                                         <constraints>
                                             <constraint firstAttribute="width" secondItem="aHd-M4-VJy" secondAttribute="height" multiplier="1:1.3" id="e2f-sz-rNj"/>
@@ -193,7 +193,6 @@
     </scenes>
     <resources>
         <image name="icon" width="100" height="100"/>
-        <image name="iconFill" width="100" height="100"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

@@ -21,7 +21,6 @@ class MainPageVC: UIViewController {
         MovieBrain.setup(MovieBrain.Config(c: collectionView, s: filterSegment, p: self))
         br = MovieBrain.br
         br.config()
-        br.fetchData()
         
     }
     

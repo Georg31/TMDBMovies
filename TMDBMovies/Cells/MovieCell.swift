@@ -14,8 +14,9 @@ protocol Favouties {
 
 class MovieCell: UICollectionViewCell {
     
+    @IBOutlet weak var ratingLabel: UILabel!
+    @IBOutlet weak var ratingView: UIView!
     @IBOutlet weak var imgView: UIImageView!
-    @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var favouriteButton: UIButton!
     
     var del: Favouties?
@@ -48,7 +49,8 @@ class MovieCell: UICollectionViewCell {
     
     func config(movie: Movies){
         self.movie = movie
-        titleLabel.text = movie.title
+        addRatingView()
+        ratingLabel.text = String(movie.voteAverage)
         if movie.favourite {
             favouriteButton.setImage(UIImage(named: "iconFill"), for: .normal)
         }
@@ -66,6 +68,28 @@ class MovieCell: UICollectionViewCell {
             }
         }
        
+    }
+    
+    func percentToRadians() -> Double {
+        return 2 * Double.pi / 10.0 * movie.voteAverage
+    }
+    
+    func addRatingView(){
+        let circlePath = UIBezierPath(arcCenter: CGPoint(x: ratingView.bounds.midX,y: ratingView.bounds.midY), radius: CGFloat(20), startAngle: CGFloat(-Double.pi / 2), endAngle:CGFloat(-1.55 + percentToRadians()), clockwise: true)
+        let shapeLayer = CAShapeLayer()
+        shapeLayer.path = circlePath.cgPath
+        shapeLayer.fillColor = .none
+        shapeLayer.strokeColor = #colorLiteral(red: 0.1292955875, green: 0.7561361194, blue: 0.4459108114, alpha: 1)
+        shapeLayer.lineWidth = 3.0
+    
+        let circlePath2 = UIBezierPath(arcCenter: CGPoint(x: ratingView.bounds.midX,y: ratingView.bounds.midY), radius: CGFloat(20), startAngle: CGFloat(0), endAngle:CGFloat(Double.pi * 2), clockwise: true)
+        let shapeLayer2 = CAShapeLayer()
+        shapeLayer2.path = circlePath2.cgPath
+        shapeLayer2.fillColor = .none
+        shapeLayer2.strokeColor = #colorLiteral(red: 0.2549019754, green: 0.2745098174, blue: 0.3019607961, alpha: 1)
+        shapeLayer2.lineWidth = 3.0
+        ratingView.layer.addSublayer(shapeLayer2)
+        ratingView.layer.addSublayer(shapeLayer)
     }
     
 }

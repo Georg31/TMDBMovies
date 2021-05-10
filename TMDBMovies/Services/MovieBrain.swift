@@ -46,6 +46,7 @@ class MovieBrain: NSObject{
         NotificationCenter.default.addObserver(forName: NSNotification.Name(Constants.connection), object: nil, queue: nil) { _ in
             self.presentAlert()
         }
+        filter()
     }
     
     func presentAlert(){
@@ -63,7 +64,7 @@ class MovieBrain: NSObject{
     }
     
     func checkFavs(){
-        favMovies = db.getMovies().addFavs
+        favMovies = db.getMovies().getFavs
         for (ind, item) in movies.enumerated() {
             if favMovies.contains(item)
             {movies[ind].favourite = true}
@@ -73,9 +74,10 @@ class MovieBrain: NSObject{
     func filter(){
         movies = []
         collectionV.reloadData()
+        parent.title = seg.titleForSegment(at: seg.selectedSegmentIndex)
         if seg.selectedSegmentIndex == 2 {
             favMovies = []
-            favMovies += db.getMovies().addFavs
+            favMovies += db.getMovies().getFavs
             service.page = 1
             movies = favMovies
             collectionV.reloadData()
@@ -94,7 +96,7 @@ extension MovieBrain: Favouties{
             db.deleteMovie(movie: db.getMovies()[ind])
         }
         if seg.selectedSegmentIndex == 2{
-            favMovies = db.getMovies().addFavs
+            favMovies = db.getMovies().getFavs
             movies = favMovies
             collectionV.reloadData()
         }

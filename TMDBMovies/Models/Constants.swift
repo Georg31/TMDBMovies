@@ -37,7 +37,7 @@ extension Array {
         return arr
     }
     
-    var addFavs: [Movies]{
+    var getFavs: [Movies]{
         var arr = [Movies]()
         for item in self {
             arr.append(Movies(param: item as! UserMovies))
