@@ -17,12 +17,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <searchBar contentMode="redraw" translatesAutoresizingMaskIntoConstraints="NO" id="1Xo-4v-dc1">
-                                <rect key="frame" x="0.0" y="88" width="390" height="51"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </searchBar>
                             <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="mWf-Mz-OR9">
-                                <rect key="frame" x="0.0" y="139" width="390" height="32"/>
+                                <rect key="frame" x="0.0" y="88" width="390" height="32"/>
                                 <segments>
                                     <segment title="Top Rated"/>
                                     <segment title="Popular"/>
@@ -33,7 +29,7 @@
                                 </connections>
                             </segmentedControl>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="qQN-PK-eaE">
-                                <rect key="frame" x="0.0" y="178" width="390" height="666"/>
+                                <rect key="frame" x="0.0" y="127" width="390" height="717"/>
                                 <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="tSD-OE-NkT">
                                     <size key="itemSize" width="128" height="128"/>
@@ -48,15 +44,12 @@
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <constraints>
                             <constraint firstItem="qQN-PK-eaE" firstAttribute="top" secondItem="mWf-Mz-OR9" secondAttribute="bottom" constant="8" symbolic="YES" id="1cJ-AT-95k"/>
-                            <constraint firstItem="1Xo-4v-dc1" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="Ekp-HA-R8e"/>
                             <constraint firstItem="mWf-Mz-OR9" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="UaS-iB-VGt"/>
-                            <constraint firstItem="1Xo-4v-dc1" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="VBt-3u-HHa"/>
-                            <constraint firstItem="1Xo-4v-dc1" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="ZYa-yW-s2j"/>
                             <constraint firstAttribute="bottom" secondItem="qQN-PK-eaE" secondAttribute="bottom" id="cT2-H0-JNx"/>
+                            <constraint firstItem="mWf-Mz-OR9" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="cd1-hJ-Inh"/>
                             <constraint firstItem="qQN-PK-eaE" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="g4l-6O-tSG"/>
                             <constraint firstItem="qQN-PK-eaE" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="mnE-SO-UHu"/>
                             <constraint firstItem="mWf-Mz-OR9" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="tt0-O6-AQu"/>
-                            <constraint firstItem="mWf-Mz-OR9" firstAttribute="top" secondItem="1Xo-4v-dc1" secondAttribute="bottom" id="vD4-PY-r8t"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="opL-Tg-eda"/>
